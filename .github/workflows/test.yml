@@ -5,14 +5,15 @@ on:
       - master
       - develop
   push:
-      branches:
-        - master
+    branches:
+      - master
+      - develop
 jobs:
   test:
     runs-on: ubuntu-24.04
     strategy:
       matrix:
-        php: [ '8.1', '8.2', '8.3', '8.4' ]
+        php: [ '8.1', '8.2', '8.3', '8.4', '8.5' ]
     steps:
       - uses: actions/checkout@v4
       - run: mkdir -p build/logs
