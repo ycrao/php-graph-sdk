@@ -415,7 +415,7 @@ class FacebookRequest
         $accessToken = $this->getAccessToken();
         if ($accessToken) {
             $params['access_token'] = $accessToken;
-            $params['appsecret_proof'] = $this->getAppSecretProof();
+            // $params['appsecret_proof'] = $this->getAppSecretProof();
         }
 
         return $params;
